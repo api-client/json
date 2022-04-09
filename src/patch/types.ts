@@ -61,7 +61,7 @@ export interface ApplyResult<T = unknown> {
 }
 
 export interface ApplyResultWithRevert extends ApplyResult {
-  revert: JsonPatch[];
+  revert: JsonPatch;
 }
 
 export type PatchResult = ApplyResult;

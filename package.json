@@ -1,8 +1,8 @@
 {
   "name": "@api-client/json",
+  "version": "0.1.1",
   "description": "JSON utility libraries for API Client.",
   "license": "CC-BY-2.0",
-  "version": "0.1.0",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -32,7 +32,8 @@
     "format": "eslint --ext .ts . --fix --ignore-path .gitignore",
     "test": "tsc && wtr --coverage --playwright --browsers chromium firefox webkit",
     "test:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wtr --watch --playwright --browsers chromium\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tsc:watch": "tsc --watch"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
