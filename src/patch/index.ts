@@ -1,6 +1,6 @@
 import apply from './apply.js';
 
-export { default as diff } from './diff.js';
+export { default as diff } from './diff2.js';
 export { default as valid } from './valid.js';
 
 // Patching

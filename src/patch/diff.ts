@@ -21,6 +21,11 @@ import { JsonPatch } from './types.js';
  */
 export default function diff(a: any, b: any, pre?: string[]): JsonPatch {
   let patches: JsonPatch = [];
+
+  if (a === b) {
+    return patches;
+  }
+
   const prefix = pre || [];
 
   const at = Type(a);
@@ -40,11 +45,7 @@ export default function diff(a: any, b: any, pre?: string[]): JsonPatch {
       patches.push({ op: "replace", path: encode(prefix), value: b });
     }
     return patches;
-  }
-
-  if (a === b) {
-    return patches;
-  }
+  }  
   
   if (Array.isArray(b)) { // both are arrays
     // FIXME let's be smarter about array diffing

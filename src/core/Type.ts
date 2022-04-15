@@ -1,5 +1,6 @@
+const primitives = ['boolean', 'string', 'number', 'null'];
 
-export default function type(obj: any): string | undefined {
+export default function Type(obj: any): string | undefined {
   const t = typeof obj;
 
   if (t === 'boolean' || t === 'string') {
@@ -27,3 +28,10 @@ export default function type(obj: any): string | undefined {
   }
   return undefined;
 };
+
+export function isPrimitive(type: string | undefined): boolean {
+  if (type === undefined) {
+    return true;
+  }
+  return primitives.includes(type);
+}

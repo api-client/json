@@ -1,6 +1,6 @@
 {
   "name": "@api-client/json",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "JSON utility libraries for API Client.",
   "license": "CC-BY-2.0",
   "main": "dist/src/index.js",
@@ -39,7 +39,7 @@
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@open-wc/eslint-config": "^7.0.0",
-    "@open-wc/testing": "3.1.2",
+    "@open-wc/testing": "^3.1.2",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
     "@web/test-runner": "0.13.27",
