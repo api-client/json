@@ -5,7 +5,7 @@ export default function compile(pointer: any): Function {
 
   let str = "return doc";
   for (const token of tokens) {
-    str += `['${token.replace(/\\/, "\\\\").replace(/'/, "\\'")}']`;
+    str += `['${token.replace(/\\/g, "\\\\").replace(/'/, "\\'")}']`;
   }
 
   // eslint-disable-next-line no-new-func
