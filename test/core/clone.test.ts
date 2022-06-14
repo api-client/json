@@ -62,4 +62,20 @@ describe("clone", () => {
     assert(cl === 0);
     assert(1 / cl === -Infinity);
   });
+
+  it('clones recursive objects', () => {
+    const parent = {
+      items: [] as any[],
+      prop: '1',
+    };
+    parent.items.push({
+      prop: '2',
+      parent,
+    });
+    const result = clone(parent);
+    assert.equal(result.prop, '1');
+    assert.lengthOf(result.items, 1);
+    assert.equal(result.items[0].prop, '2');
+    assert.typeOf(result.items[0].parent, 'object');
+  });
 });
